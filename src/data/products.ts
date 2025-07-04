@@ -1,3 +1,4 @@
+
 export const products = [
   {
     id: 1,
@@ -250,6 +251,69 @@ export const products = [
     description: "Futuristic tunnel with glowing geometric frames.",
     category: "Sci-Fi",
     fullDescription: "A mesmerizing tunnel lined with glowing geometric frames creates a portal to the future. This striking piece combines minimalist design with sci-fi aesthetics."
+  },
+  {
+    id: 29,
+    name: "The Hidden Genius",
+    image: "/lovable-uploads/2bdcd6ff-ae68-4c2b-9a45-822e2d764bcf.png",
+    price: 16,
+    description: "Anime-inspired green artistic poster with dramatic character design.",
+    category: "Anime",
+    fullDescription: "A striking anime-inspired artwork featuring Kisuke Urahara in dramatic green tones. This poster combines traditional Japanese aesthetics with modern manga styling, perfect for anime enthusiasts and collectors."
+  },
+  {
+    id: 30,
+    name: "Zen Garden Harmony",
+    image: "/lovable-uploads/6740a14f-95e5-47ba-bee4-83302553388a.png",
+    price: 18,
+    description: "Serene Japanese garden with Mount Fuji and cherry blossoms.",
+    category: "Nature",
+    fullDescription: "A breathtaking Japanese garden scene featuring Mount Fuji in the background, cherry blossoms in full bloom, and a peaceful pond with koi fish. This tranquil artwork brings the essence of Japanese zen philosophy to your space."
+  },
+  {
+    id: 31,
+    name: "Freedom's Call",
+    image: "/lovable-uploads/e6191742-fa64-4605-83e2-d519079cf39f.png",
+    price: 15,
+    description: "Powerful symbolism with bird taking flight from hand on red background.",
+    category: "Symbolic",
+    fullDescription: "A dramatic composition featuring a bird taking flight from an outstretched hand against a bold red background. This powerful artwork symbolizes freedom, liberation, and the courage to let go."
+  },
+  {
+    id: 32,
+    name: "Golden Forest Stream",
+    image: "/lovable-uploads/875b37d3-67e0-4718-b0fe-0e983aac7b3c.png",
+    price: 17,
+    description: "Mystical autumn forest with golden light streaming through trees.",
+    category: "Nature",
+    fullDescription: "A magical autumn forest scene where golden sunlight filters through amber leaves, illuminating a crystal-clear stream below. This enchanting artwork captures the warmth and wonder of nature's seasonal transformation."
+  },
+  {
+    id: 33,
+    name: "Tropical Paradise",
+    image: "/lovable-uploads/c649b369-7fa5-42d5-9735-4c5bb3cd6cc8.png",
+    price: 16,
+    description: "Pristine tropical beach with swaying palm trees at sunset.",
+    category: "Nature",
+    fullDescription: "An idyllic tropical paradise featuring crystal-clear waters, pristine white sand, and swaying palm trees bathed in the warm glow of sunset. This peaceful artwork brings vacation vibes and relaxation to any space."
+  },
+  {
+    id: 34,
+    name: "Celestial Journey",
+    image: "/lovable-uploads/35c9c68d-32e2-4704-8743-977ab5999789.png",
+    price: 19,
+    description: "Surreal landscape with pink clouds, crescent moon, and lone flamingo on country road.",
+    category: "Surreal",
+    fullDescription: "A dreamlike scene featuring dramatic pink clouds, a glowing crescent moon, and a solitary flamingo walking down a country road toward a distant house. This surreal artwork blends reality with fantasy in stunning detail."
+  },
+  {
+    id: 35,
+    name: "Majestic Wildlife",
+    image: "/lovable-uploads/0c869c00-8800-4951-ab4b-1751ffab9557.png",
+    price: 20,
+    description: "Powerful elephant with soaring eagles in dramatic natural setting.",
+    category: "Animals",
+    fullDescription: "A magnificent composition showcasing the raw power of nature with a majestic elephant and soaring eagles captured in dynamic motion. This dramatic wildlife artwork celebrates the strength and beauty of the animal kingdom."
   }
 ];
 

@@ -39,34 +39,34 @@ const Index = () => {
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground overflow-x-hidden">
       {/* Floating Header */}
-      <header className="fixed top-4 left-4 right-4 z-50 flex items-center justify-between px-6 md:px-8 py-4 bg-card/80 backdrop-blur-md border border-border shadow-sm rounded-full animate-fade-in">
+      <header className="fixed top-4 left-4 right-4 z-50 flex items-center justify-between px-6 md:px-8 py-4 bg-card/80 backdrop-blur-md border border-border/50 shadow-lg rounded-full animate-fade-in animate-button-glow">
         <Link to="/" className="flex items-center gap-3 hover:scale-105 transition-transform duration-200">
           <img
             src="/lovable-uploads/31a7662c-7cae-413d-bf9e-4852bc320833.png"
             alt="AetherGraphix Logo"
-            className="h-8 w-8 rounded-full shadow object-cover border border-border"
+            className="h-8 w-8 rounded-full shadow object-cover border border-border animate-poster-glow"
             draggable={false}
           />
-          <span className="text-xl font-extrabold font-mono tracking-tight">AetherGraphix</span>
+          <span className="text-xl font-extrabold font-mono tracking-tight bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent animate-text-glow">AetherGraphix</span>
         </Link>
         <div className="flex items-center gap-8">
           <nav className="hidden md:flex items-center gap-6">
-            <Link to="/" className="text-foreground hover:text-blue-600 transition-all duration-200 font-medium hover:scale-105">Home</Link>
-            <Link to="/shop" className="text-foreground hover:text-blue-600 transition-all duration-200 font-medium hover:scale-105">Products</Link>
-            <a href="#about" className="text-foreground hover:text-blue-600 transition-all duration-200 font-medium hover:scale-105">About</a>
-            <a href="#features" className="text-foreground hover:text-blue-600 transition-all duration-200 font-medium hover:scale-105">Features</a>
+            <Link to="/" className="text-foreground hover:text-blue-600 transition-all duration-200 font-medium hover:scale-105 animate-text-glow">Home</Link>
+            <Link to="/shop" className="text-foreground hover:text-blue-600 transition-all duration-200 font-medium hover:scale-105 animate-text-glow">Products</Link>
+            <a href="#about" className="text-foreground hover:text-blue-600 transition-all duration-200 font-medium hover:scale-105 animate-text-glow">About</a>
+            <a href="#features" className="text-foreground hover:text-blue-600 transition-all duration-200 font-medium hover:scale-105 animate-text-glow">Features</a>
           </nav>
           <Link 
             to="/cart" 
-            className="relative flex items-center gap-2 text-foreground hover:text-blue-600 transition-all duration-200 hover:scale-105"
+            className="relative flex items-center gap-2 text-foreground hover:text-blue-600 transition-all duration-200 hover:scale-105 group"
           >
-            <ShoppingCart size={20} />
+            <ShoppingCart size={20} className="group-hover:animate-bounce" />
             {cartItemCount > 0 && (
-              <span className="absolute -top-2 -right-2 bg-blue-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center animate-pulse">
+              <span className="absolute -top-2 -right-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center animate-pulse animate-button-glow">
                 {cartItemCount}
               </span>
             )}
-            <span className="hidden md:inline text-sm font-medium">Cart</span>
+            <span className="hidden md:inline text-sm font-medium animate-text-glow">Cart</span>
           </Link>
         </div>
       </header>
@@ -81,9 +81,9 @@ const Index = () => {
             <img
               src="/lovable-uploads/0ede5133-a3ce-42bc-95b3-93ce09f22575.png"
               alt="Japanese Garden Poster"
-              className="w-32 h-40 md:w-48 md:h-60 object-cover rounded-lg shadow-2xl opacity-30 hover:opacity-60 transition-all duration-500 animate-poster-glow"
+              className="w-32 h-40 md:w-48 md:h-60 object-cover rounded-lg shadow-2xl opacity-60 hover:opacity-80 transition-all duration-500 animate-poster-glow"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-blue-500/20 to-purple-500/20 rounded-lg animate-shimmer"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-blue-500/30 to-purple-500/30 rounded-lg animate-shimmer"></div>
           </div>
         </div>
         
@@ -166,7 +166,7 @@ const Index = () => {
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Glowing Art Collection
+              Poster Collection
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto animate-fade-in animation-delay-200">
               Discover our exclusive collection of luminescent posters that bring ethereal beauty and ambient lighting to any space
@@ -217,10 +217,6 @@ const Index = () => {
                           <p className="text-sm text-blue-400 font-medium">{poster.theme}</p>
                           <p className="text-xs text-gray-500">{poster.colors}</p>
                         </div>
-                        <div className="flex items-center gap-2">
-                          <Zap className="w-4 h-4 text-yellow-400 animate-pulse" />
-                          <span className="text-sm text-yellow-400 font-medium">Glowing Effect</span>
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -232,7 +228,7 @@ const Index = () => {
           <div className="text-center mt-16 animate-fade-in animation-delay-600">
             <Link to="/shop">
               <Button size="lg" className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-700 hover:via-purple-700 hover:to-pink-700 text-white px-8 py-4 text-lg hover:scale-105 transition-all duration-300 animate-button-glow border-2 border-purple-500/30">
-                Explore All Glowing Posters
+                Explore All Posters
                 <Sparkles className="ml-2 w-5 h-5 animate-spin-slow" />
               </Button>
             </Link>
@@ -334,70 +330,125 @@ const Index = () => {
               <p className="text-muted-foreground leading-relaxed">
                 We believe art should move you. Every piece is selected for its ability to create 
                 an emotional resonance that transforms both space and spirit.
-              </p>
+              </p>  
             </div>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-12 px-4 bg-card border-t">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <img
-              src="/lovable-uploads/31a7662c-7cae-413d-bf9e-4852bc320833.png"
-              alt="AetherGraphix Logo"
-              className="h-8 w-8 rounded-full shadow object-cover border border-border"
-              draggable={false}
-            />
-            <span className="text-xl font-extrabold font-mono tracking-tight">AetherGraphix</span>
+      {/* Enhanced Footer with Heroic Theme */}
+      <footer className="py-16 px-4 bg-gradient-to-br from-slate-900 via-purple-900 to-black text-white relative overflow-hidden border-t border-purple-500/30">
+        {/* Heroic Background Elements */}
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 via-purple-900/20 to-pink-900/20 animate-pulse"></div>
+        <div className="absolute top-10 left-10 w-20 h-20 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-full animate-float blur-xl"></div>
+        <div className="absolute bottom-10 right-10 w-32 h-32 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full animate-float animation-delay-300 blur-xl"></div>
+        
+        <div className="max-w-6xl mx-auto relative z-10">
+          {/* Logo and Brand */}
+          <div className="text-center mb-12 animate-fade-in">
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <div className="relative">
+                <img
+                  src="/lovable-uploads/31a7662c-7cae-413d-bf9e-4852bc320833.png"
+                  alt="AetherGraphix Logo"
+                  className="h-12 w-12 rounded-full shadow-lg object-cover border-2 border-purple-500/50 animate-poster-glow"
+                  draggable={false}
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full animate-ping"></div>
+              </div>
+              <span className="text-3xl font-extrabold font-mono tracking-tight bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-text-glow">AetherGraphix</span>
+            </div>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto animate-fade-in animation-delay-200">
+              🌟 Transforming spaces with exceptional art and design 🌟
+            </p>
           </div>
           
-          {/* Contact Information */}
-          <div className="text-center mb-8">
-            <h3 className="text-lg font-semibold mb-4">📞 Get in Touch</h3>
-            <div className="flex flex-col md:flex-row justify-center items-center gap-6 text-muted-foreground">
-              <a 
-                href="https://www.instagram.com/aethergraphix/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:text-pink-500 transition-colors"
-              >
-                <Instagram size={20} />
-                <span>📸 Follow us @aethergraphix</span>
-              </a>
-              
-              <a 
-                href="https://wa.me/923349261882" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:text-green-500 transition-colors"
-              >
-                <span className="text-lg">💬</span>
-                <span>WhatsApp: +92 334 926 1882</span>
-              </a>
-              
-              <a 
-                href="mailto:aipsoters23@gmail.com"
-                className="flex items-center gap-2 hover:text-blue-500 transition-colors"
-              >
-                <Mail size={20} />
-                <span>✉️ aipsoters23@gmail.com</span>
-              </a>
+          {/* Enhanced Contact Information */}
+          <div className="mb-12 animate-fade-in animation-delay-300">
+            <h3 className="text-2xl font-bold mb-8 text-center bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent animate-text-glow">
+              ✨ Connect With Us ✨
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Instagram */}
+              <div className="group text-center">
+                <a 
+                  href="https://www.instagram.com/aethergraphix/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center gap-4 p-6 bg-gradient-to-br from-pink-900/30 to-purple-900/30 rounded-2xl border border-pink-500/30 hover:border-pink-400/60 transition-all duration-300 hover:scale-105 group animate-button-glow"
+                >
+                  <div className="relative">
+                    <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full flex items-center justify-center group-hover:rotate-12 transition-transform duration-300 animate-pulse">
+                      <Instagram size={32} className="text-white" />
+                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-pink-500/30 to-purple-500/30 rounded-full animate-ping opacity-0 group-hover:opacity-100"></div>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-pink-300 group-hover:text-pink-200 transition-colors">Follow Our Journey</p>
+                    <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">@aethergraphix</p>
+                    <p className="text-xs text-pink-400 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">Behind the scenes & new releases</p>
+                  </div>
+                </a>
+              </div>
+
+              {/* WhatsApp */}
+              <div className="group text-center">
+                <a 
+                  href="https://wa.me/923349261882" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center gap-4 p-6 bg-gradient-to-br from-green-900/30 to-teal-900/30 rounded-2xl border border-green-500/30 hover:border-green-400/60 transition-all duration-300 hover:scale-105 group animate-button-glow"
+                >
+                  <div className="relative">
+                    <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center group-hover:rotate-12 transition-transform duration-300 animate-pulse">
+                      <span className="text-2xl">💬</span>
+                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-green-500/30 to-teal-500/30 rounded-full animate-ping opacity-0 group-hover:opacity-100"></div>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-green-300 group-hover:text-green-200 transition-colors">Chat With Us</p>
+                    <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">+92 334 926 1882</p>
+                    <p className="text-xs text-green-400 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">Quick support & custom orders</p>
+                  </div>
+                </a>
+              </div>
+
+              {/* Email */}
+              <div className="group text-center">
+                <a 
+                  href="mailto:aipsoters23@gmail.com"
+                  className="flex flex-col items-center gap-4 p-6 bg-gradient-to-br from-blue-900/30 to-indigo-900/30 rounded-2xl border border-blue-500/30 hover:border-blue-400/60 transition-all duration-300 hover:scale-105 group animate-button-glow"
+                >
+                  <div className="relative">
+                    <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center group-hover:rotate-12 transition-transform duration-300 animate-pulse">
+                      <Mail size={32} className="text-white" />
+                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/30 to-indigo-500/30 rounded-full animate-ping opacity-0 group-hover:opacity-100"></div>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-blue-300 group-hover:text-blue-200 transition-colors">Email Us</p>
+                    <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">aipsoters23@gmail.com</p>
+                    <p className="text-xs text-blue-400 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">Professional inquiries & support</p>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
 
-          <p className="text-muted-foreground mb-6 text-center">
-            🌟 Transforming spaces with exceptional art and design 🌟
-          </p>
-          <div className="flex justify-center gap-8 mb-6">
-            <Link to="/shop" className="text-muted-foreground hover:text-foreground transition">Shop</Link>
-            <a href="#about" className="text-muted-foreground hover:text-foreground transition">About</a>
-            <Link to="/custom-order" className="text-muted-foreground hover:text-foreground transition">Custom Orders</Link>
+          {/* Navigation Links */}
+          <div className="flex justify-center gap-8 mb-8 animate-fade-in animation-delay-400">
+            <Link to="/shop" className="text-gray-300 hover:text-white font-medium transition-all duration-200 hover:scale-105 animate-text-glow border-b border-transparent hover:border-purple-400">Shop</Link>
+            <a href="#about" className="text-gray-300 hover:text-white font-medium transition-all duration-200 hover:scale-105 animate-text-glow border-b border-transparent hover:border-purple-400">About</a>
+            <Link to="/custom-order" className="text-gray-300 hover:text-white font-medium transition-all duration-200 hover:scale-105 animate-text-glow border-b border-transparent hover:border-purple-400">Custom Orders</Link>
           </div>
-          <p className="text-sm text-muted-foreground text-center">
-            © 2024 AetherGraphix. All rights reserved.
-          </p>
+
+          {/* Copyright */}
+          <div className="text-center animate-fade-in animation-delay-500">
+            <div className="w-full h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent mb-6"></div>
+            <p className="text-sm text-gray-400">
+              © 2024 AetherGraphix. All rights reserved. | Crafted with ❤️ for art lovers worldwide
+            </p>
+          </div>
         </div>
       </footer>
     </div>
