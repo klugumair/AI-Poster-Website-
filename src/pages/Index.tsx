@@ -50,6 +50,16 @@ const Index = () => {
       {/* Hero Section with Enhanced Animations */}
       <section className="pt-32 pb-16 px-4 text-center bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950 dark:to-purple-950 overflow-hidden relative">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-400/10 to-purple-400/10 animate-pulse"></div>
+        
+        {/* Floating Poster Image */}
+        <div className="absolute top-20 right-10 md:right-20 z-0 animate-float">
+          <img
+            src="/lovable-uploads/0ede5133-a3ce-42bc-95b3-93ce09f22575.png"
+            alt="Japanese Garden Poster"
+            className="w-32 h-40 md:w-48 md:h-60 object-cover rounded-lg shadow-lg opacity-20 hover:opacity-40 transition-opacity duration-300"
+          />
+        </div>
+        
         <div className="max-w-4xl mx-auto relative z-10">
           <div className="animate-fade-in">
             <h1 className="text-5xl md:text-7xl font-extrabold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent animate-scale-in animate-bounce-slow">
@@ -64,7 +74,7 @@ const Index = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in animation-delay-400">
             <Link to="/shop">
-              <Button size="lg" className="text-lg px-8 py-4 hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl animate-pulse animate-glow">
+              <Button size="lg" className="text-lg px-8 py-4 hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl animate-glow border-2 border-blue-500/50">
                 Explore Collection
                 <ChevronRight className="ml-2 w-5 h-5 animate-bounce" />
               </Button>
