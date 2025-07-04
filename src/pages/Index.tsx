@@ -52,25 +52,25 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-400/10 to-purple-400/10 animate-pulse"></div>
         <div className="max-w-4xl mx-auto relative z-10">
           <div className="animate-fade-in">
-            <h1 className="text-5xl md:text-7xl font-extrabold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent animate-scale-in">
+            <h1 className="text-5xl md:text-7xl font-extrabold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent animate-scale-in animate-bounce-slow">
               AetherGraphix
             </h1>
             <div className="flex justify-center mb-6">
-              <Sparkles className="w-8 h-8 text-blue-500 animate-pulse" />
+              <Sparkles className="w-8 h-8 text-blue-500 animate-spin-slow" />
             </div>
           </div>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto animate-fade-in animation-delay-200">
+          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto animate-fade-in animation-delay-200 animate-slide-up">
             Transform your space with stunning, high-quality posters that capture the essence of modern art and design.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in animation-delay-400">
             <Link to="/shop">
-              <Button size="lg" className="text-lg px-8 py-4 hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl animate-pulse">
+              <Button size="lg" className="text-lg px-8 py-4 hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl animate-pulse animate-glow">
                 Explore Collection
-                <ChevronRight className="ml-2 w-5 h-5" />
+                <ChevronRight className="ml-2 w-5 h-5 animate-bounce" />
               </Button>
             </Link>
             <Link to="/custom-order">
-              <Button variant="outline" size="lg" className="text-lg px-8 py-4 hover:scale-105 transition-all duration-200 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50">
+              <Button variant="outline" size="lg" className="text-lg px-8 py-4 hover:scale-105 transition-all duration-200 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 animate-shimmer">
                 Custom Orders
               </Button>
             </Link>
@@ -130,11 +130,16 @@ const Index = () => {
                       className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                       loading="lazy"
                       onLoad={(e) => {
-                        e.currentTarget.style.opacity = '1';
+                        const target = e.target as HTMLImageElement;
+                        target.style.opacity = '1';
                       }}
                       onError={(e) => {
-                        e.currentTarget.style.display = 'none';
-                        e.currentTarget.nextElementSibling?.style.display = 'block';
+                        const target = e.target as HTMLImageElement;
+                        target.style.display = 'none';
+                        const nextElement = target.nextElementSibling as HTMLElement;
+                        if (nextElement) {
+                          nextElement.style.display = 'block';
+                        }
                       }}
                       style={{ opacity: 0, transition: 'opacity 0.3s' }}
                     />
