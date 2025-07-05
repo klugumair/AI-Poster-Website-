@@ -1,32 +1,38 @@
-## AI Posters is a dynamic and modern web application that allows users to browse, purchase, and customize AI-generated posters. Whether you're a fan of minimal design, futuristic themes, or personalized artwork, this platform brings creativity and technology together in one seamless shopping experience.
+# 🧠 AI Posters – Smart Art, Custom-Made with AI
 
-🎯 Key Features
-🛒 Browse & Buy Posters: Users can explore a wide collection of AI-generated posters categorized by theme and style.
+**AI Posters** is a sleek, modern web application that empowers users to **browse, purchase, and request custom AI-generated posters**. Whether you're drawn to minimalism, abstract design, or futuristic visuals, this platform merges creativity and technology to deliver a seamless and immersive user experience.
 
-🎨 Custom Poster Orders: Visitors can submit their own ideas or preferences to generate unique, one-of-a-kind poster designs.
+---
 
-📦 Order System: Integrated order form with product details, pricing, and confirmation for smooth transactions.
+## 🎯 Key Features
 
-💬 Responsive Design: Clean, user-friendly interface optimized for both desktop and mobile users.
+- 🛒 **Explore & Shop Posters:** Discover a curated collection of AI-generated posters, organized by themes and artistic styles.
+- 🎨 **Custom Poster Requests:** Users can submit ideas, concepts, or preferences to generate unique, personalized poster artwork.
+- 📦 **Integrated Ordering System:** Includes product details, dynamic pricing, and smooth checkout flow for user convenience.
+- 💬 **Responsive & Accessible Design:** Fully optimized for both desktop and mobile, ensuring a seamless experience across all devices.
 
+---
 
+## 💻 Technologies Used
 
+This project is developed using a modern frontend tech stack:
 
+- ⚡ **Vite** – Fast build tool and development server
+- 🛠 **TypeScript** – Type-safe JavaScript for scalable code
+- ⚛️ **React** – Component-based UI library for building interactive interfaces
+- 🎨 **shadcn/ui** – Reusable and accessible UI components
+- 💅 **Tailwind CSS** – Utility-first CSS framework for rapid UI styling
 
-## What technologies are used for this project?
+---
 
-This project is built with:
+## 🧰 Development Tools & AI Assistants
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+The following tools and AI assistants were used to accelerate development and enhance functionality:
 
-## Tools used to develop this website 
+- 🤖 **Lovable AI** – Assisted in UI/UX generation and feature ideas  
+- ⚡ **Bolt AI** – Used for data automation and content management tasks  
+- 🧠 **Claude** – Brainstormed concepts and structured backend logic  
+- ✍️ **Cursor** – AI-powered coding editor for faster and cleaner development  
 
-- Lovable ai
-- Bolt ai
-- Claude 
-- Cursor 
-  
+---
+
