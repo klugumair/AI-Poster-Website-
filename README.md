@@ -1,4 +1,4 @@
-# AI Posters is a dynamic and modern web application that allows users to browse, purchase, and customize AI-generated posters. Whether you're a fan of minimal design, futuristic themes, or personalized artwork, this platform brings creativity and technology together in one seamless shopping experience.
+## AI Posters is a dynamic and modern web application that allows users to browse, purchase, and customize AI-generated posters. Whether you're a fan of minimal design, futuristic themes, or personalized artwork, this platform brings creativity and technology together in one seamless shopping experience.
 
 🎯 Key Features
 🛒 Browse & Buy Posters: Users can explore a wide collection of AI-generated posters categorized by theme and style.
